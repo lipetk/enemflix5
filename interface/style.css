@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+}
+
+
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+.nav_logo{
+    width: 150px;
+    object-fit: contain;
+    position: fixed ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 20px;
+}
+
+/* inicio da criação do banner */
+.banner{
+    background-image: url('/imagens/banner.jfif');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    object-fit: contain;
+    height: 448px;
+}
+
+/* configurar as margens, padding e altura da div banner */
+.banner_contents{
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+/* configuração do titulo */
+.banner_title{
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+
+/* configurações da descrição */
+.banner_description{
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 180px;
+}
+
+
+/* configuração dos botôes do banner */
+.banner_button {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+/* animação */
+.banner_button:hover{
+    color: #000;
+    transition: all 0.2s;
+}
+
+
+/* configuração que posiciona o banner e aplica um fade out na imagem
+com a cor do conteúdo que vem a seguir */
+.banner--fadeBottom{
+    margin-top: 145px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+
+
+/* row */
+.row_poster{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: trasform 450ms;    
+}
+
+.row_posters{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* animação do poster */
+.row_poster:hover {
+    transform: scale(1.08);
+}
+
+/* poster grade*/
+.row_posterLarge{
+    max-height: 250px;
+}
+
+/* poster largo */
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+
+/* cor branca e margem esquerda de 20px */
+.row {
+    color: white;
+    margin-left: 10px;
+}
+
+/* configurar a barra de rolagem */
+.row_posters::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* cor de fundo preta */
+.nav_black{
+    background-color: #111;
+}
+
+
+/* teste de media */
+@media (max-width: 885px) {
+    .nav {       
+        width: 100vw;
+        object-fit: contain;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav_logo{
+        justify-content: center;
+        margin-left: 40vw;
+        height: 10vh;
+        padding: 20px;
+        
+    }
+
+    button{
+        display: none;
+    }
+
+}
+
+/* configuração dos botôes do banner */
+.button_nav {
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    background-color: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* animação */
+.button_nav:hover{
+    background-color: #e6e6e6;
+    color: #24252a;
+    transition: all 0.2s;
+}
+
+
+
+/* teste de menu toggle */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+
+
+/* MOBILE MENU */
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 885px) {
+    .nav{
+        padding: 1.5rem 4rem;
+    }
+    .button_nav {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;  
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .open {
+        display: block;
+    }
+}
